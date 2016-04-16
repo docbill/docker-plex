@@ -1,5 +1,6 @@
 FROM centos
-MAINTAINER Bill C Riemers <docbill@gmail.com>
+MAINTAINER Bill C Riemers https://github.com/docbill/
+
 ENV URL='https://plex.tv/downloads/latest/1?channel=8&build=linux-ubuntu-x86_64&distro=redhat' URL2=' http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm'
 
 RUN yum update -y && \
