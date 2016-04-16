@@ -3,4 +3,5 @@ if [ ! -O /config ]
 then
   usermod -u "$(stat -c %u /config)" plex
 fi
-/usr/bin/supervisord -c /etc/supervisord.conf "$@"
+exec /usr/bin/supervisord -c "$@"
+
