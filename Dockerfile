@@ -17,5 +17,5 @@ EXPOSE 32400 32400/udp 32469 32469/udp 5353/udp 1900/udp
 
 WORKDIR /config/
 
-CMD ["/root/supervisord.sh", "-n"]
+CMD ["/root/supervisord.sh", "-c", "/etc/supervisord.conf", "-n"]
 
