@@ -1,7 +1,7 @@
 FROM fedora
 MAINTAINER Bill C Riemers https://github.com/docbill/
 
-ENV URL='https://plex.tv/downloads/latest/1?channel=8&build=linux-ubuntu-x86_64&distro=redhat'
+ARG URL='https://plex.tv/downloads/latest/1?channel=8&build=linux-ubuntu-x86_64&distro=redhat'
 
 RUN dnf update -y && dnf install -y supervisor python  $(curl -w "%{url_effective}\n" -I -L -s -S $URL -o /dev/null) && dnf clean all && rm -rf /tmp/*
 
