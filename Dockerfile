@@ -7,7 +7,7 @@ RUN apt-get update -y && apt-get install -y supervisor python  $(curl -w "%{url_
 
 ADD ./supervisord.sh /root/supervisord.sh
 ADD ./supervisord.conf /etc/supervisord.conf
-ADD ./Dockerfile /Dockerfile
+# ADD ./Dockerfile /Dockerfile
 
 RUN chmod ugo+rx /root/supervisord.sh
 
