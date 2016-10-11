@@ -7,7 +7,7 @@ RUN dnf update -y && dnf install -y supervisor python  $(curl -w "%{url_effectiv
 
 ADD ./supervisord.sh /root/supervisord.sh
 ADD ./supervisord.conf /etc/supervisord.conf
-ADD ./Dockerfile /Dockerfile
+# ADD ./Dockerfile /Dockerfile
 
 RUN chmod ugo+rx /root/supervisord.sh
 
